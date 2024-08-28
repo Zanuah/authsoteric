@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @EnableExchangeClients
 @Testcontainers
-class TokenSlingerApplicationTests {
+class AuthSotericIntegrationTests {
 
     @LocalServerPort
     private int port;

@@ -12,13 +12,13 @@ import org.springframework.web.service.annotation.PostExchange;
 import java.util.Map;
 
 @HttpExchange("/")
-public interface TokenSlingerApi {
+public interface AuthSotericJTWClient {
     @PostExchange("/signin")
-    public ResponseEntity<Client> createNewClient(@RequestBody Client newClient);
+    ResponseEntity<Client> createNewClient(@RequestBody Client newClient);
 
     @GetExchange("/protectedRoute")
-    public ResponseEntity<String> protectedRoute(JwtAuthenticationToken token);
+    ResponseEntity<String> protectedRoute(JwtAuthenticationToken token);
 
     @PostExchange("/login")
-    public ResponseEntity<Map<String, String>> login(@RequestBody Login login);
+    ResponseEntity<Map<String, String>> login(@RequestBody Login login);
 }
